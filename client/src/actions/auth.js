@@ -76,7 +76,7 @@ export const register = (formData) => async (dispatch) => {
   }
 };
 
-//Logout Clear profile
+//Logout/ Clear profile
 export const logout = () => (dispatch) => {
   dispatch({ type: LOGOUT });
 };

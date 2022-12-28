@@ -5,6 +5,8 @@ import Landing from "./Components/layout/Landing.js";
 import Register from "./Components/Auth/Register.js";
 import Login from "./Components/Auth/Login";
 import Alert from "./Components/layout/Alert";
+import Dashboard from "./Components/dashboard/Dashboard";
+import PrivateRoute from "./Components/routing/PrivateRoute";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./ulits/setAuthToken";
@@ -31,6 +33,10 @@ const App = () => {
             <Routes>
               <Route exact path="/login" element={<Login />} />
               <Route exact path="/register" element={<Register />} />
+              <Route
+                path="dashboard"
+                element={<PrivateRoute component={Dashboard} />}
+              />
             </Routes>
           </section>
         </Fragment>
